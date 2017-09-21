@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>
+throw statement
+</title>
+<body>
+<p> input a number between 5 and 10</p>
+<input type="text" id="demo">
+<button type="button" onclick="test()">
+test input</button>
+<p id="messege"></p>
+<script>
+function test()
+{
+	var x=document.getElementById("demo").value;
+
+try
+{
+	if(x==" ") throw "empty";
+	if(isNaN(x)) throw "not a number";
+	x=Number(x);
+	if(x<5) throw "too low";
+	if(x>10) throw "too high";
+	if(x>5 && x<10) throw "valid no";
+	}
+	catch(err)
+	{
+	document.getElementById("messege").innerHTML="input is" + err;
+	}
+
+finally
+{
+	document.getElementById("demo").value=" ";
+}
+}
+</script>
+</body>

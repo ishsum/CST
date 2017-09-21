@@ -1,0 +1,58 @@
+<HTML>
+<TITLE>
+FORM
+</TITLE>
+<HEAD>
+	<style>
+	BODY
+	{
+		background-color:powderblue;
+		font:cursive;
+		font-size:20;
+		text-align:center;
+}
+
+	</style>
+</head>
+<script>
+function test(){
+
+	var x=document.getElementById("demo").value;
+  
+	try
+	{
+		if (!isNaN(x)) throw " a num";
+
+}
+catch(err)
+{
+	document.getElementById("message").innerHTML="input is " + err;
+
+}
+finally
+{
+	document.getElementById("demo").value=" ";
+}
+}
+
+	</script>
+<body>
+<form>
+<fieldset>
+ <B>First Name</B>:<INPUT TYPE="TEXT"  NAME="FIRST NAME" id="demo"><BR>
+<p id="message"> </p>
+<button type="button" name="check" onClick="test()">check</button><br>
+ <B>Last Name</B>:<INPUT TYPE="TEXT"  NAME="LAST NAME"><BR>
+ <b>E-mail</b>:<input type="email" name="mail"><br>
+ <b>Password:<input type="password" name="pass" maxlength="8"><br></b>
+ <b>Contact Number:<input type="number" name="contact" ><br>
+
+Gender:
+ <INPUT TYPE="RADIO" NAME="GENDER"><B>MALE</B> <BR>
+ <INPUT TYPE="RADIO" NAME="GENDER"><B>FEMALE</B> <BR>
+ <b>Age:</b><input type="number" name="age" max="40" min="20">
+  <input type="submit"  value="click"/>
+</fieldset>
+</form>
+</body>
+</HTML>
